@@ -86,19 +86,7 @@ module.exports = {
         ACCOUNT_FAMILY,
         AccountState
     }
-    /*
-    {
-                            by: by, //name / address
-                            label: label, //name
-                            type: type, //g: gov, c: corporation, a: automaton/IoT, i: individual/other
-                            email: email,
-                            location: location,
-                            endorsements_requested: [], //requested endorsements
-                            endorsements: [], //recieved endorsements
-
-                            //bal: 0 //balance ... need to do dual requests to complete integrationSW
-                        }
-    */
+    
 const _deserialize = (data) => {
     let profilesIterable = data.split('|').map(x => x.split(/,(?=(?:[^"]"[^"]")[^"]$)/gm))
         .map(x => [x[0], {
